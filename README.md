@@ -12,6 +12,7 @@ This web application allows you to convert text to speech using the Web Speech A
 1. Clone the repository:
 
    ```bash
+   https://github.com/lokesh0221/texttospeech/tree/main
 1. Open the index.html file in your web browser.
 
 2. Enter the text you want to convert to speech in the textarea.

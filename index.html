@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Speech</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000000;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .custom-input {
+      font-size: 16px;
+      padding: 20px;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      outline: none;
+      width: 200px;
+      transition: border-color 0.3s;
+    }
+
+    .custom-input:focus {
+      border-color: #2ecc71;
+    }
+
+    .custom-button {
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: #2ecc71;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .custom-button:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <input type="text" id="textToSpeak" placeholder="Enter text to convert to speech">
+    <button class="custom-button" onclick="speak()">Text to Speech</button>
+  </div>
+  <script>
+    function speak() {
+      const textToSpeak = document.getElementById('textToSpeak').value;
+      const speechSynthesis = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
